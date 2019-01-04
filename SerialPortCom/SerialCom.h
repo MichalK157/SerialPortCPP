@@ -18,7 +18,6 @@ public:
     ~SerialCom();
 
     int readSerialPort(char *buffer, unsigned int buf_size);
-    void Read(char *buffer, unsigned int buf_size);
     bool writeSerialPort(char *buffer, unsigned int buf_size);
     bool isConnected();
 

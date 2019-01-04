@@ -89,19 +89,3 @@ bool SerialCom::isConnected()
     return this->connected;
 }
 
-void SerialCom::Read(char buffer[], unsigned int buf_size)
-{
-    DWORD bytesRead;
-    unsigned int toRead;
-
-    ClearCommError(this->handler, &this->errors, &this->status);
-
-    if (this->status.cbInQue > 0){
-        if (this->status.cbInQue > buf_size){
-            toRead = buf_size;
-        }
-        else toRead = this->status.cbInQue;
-    }
-
-    if (ReadFile(this->handler, buffer, toRead, &bytesRead, NULL)) int read_result= bytesRead;
-}
