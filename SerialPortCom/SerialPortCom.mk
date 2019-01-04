@@ -5,18 +5,18 @@
 ## Debug
 ProjectName            :=SerialPortCom
 ConfigurationName      :=Debug
-WorkspacePath          :=C:/Users/MK-AFK/Documents/CPP/cpp
-ProjectPath            :=C:/Users/MK-AFK/Documents/CPP/cpp/SerialPortCPP/SerialPortCom
+WorkspacePath          :=C:/Users/mkac/Documents/cpp
+ProjectPath            :=C:/Users/mkac/Documents/cpp/SerialPortCPP/SerialPortCom
 IntermediateDirectory  :=./Debug
 OutDir                 := $(IntermediateDirectory)
 CurrentFileName        :=
 CurrentFilePath        :=
 CurrentFileFullPath    :=
-User                   :=MK-AFK
-Date                   :=03/01/2019
-CodeLitePath           :="C:/Program Files/CodeLite"
-LinkerName             :=C:/TDM-GCC-64/bin/g++.exe
-SharedObjectLinkerName :=C:/TDM-GCC-64/bin/g++.exe -shared -fPIC
+User                   :=mkac
+Date                   :=04/01/2019
+CodeLitePath           :=C:/Users/mkac/Desktop/CodeL
+LinkerName             :=C:/Users/mkac/Documents/gcc/bin/g++.exe
+SharedObjectLinkerName :=C:/Users/mkac/Documents/gcc/bin/g++.exe -shared -fPIC
 ObjectSuffix           :=.o
 DependSuffix           :=.o.d
 PreprocessSuffix       :=.i
@@ -36,7 +36,7 @@ ObjectsFileList        :="SerialPortCom.txt"
 PCHCompileFlags        :=
 MakeDirCommand         :=makedir
 RcCmpOptions           := 
-RcCompilerName         :=C:/TDM-GCC-64/bin/windres.exe
+RcCompilerName         :=C:/Users/mkac/Documents/gcc/bin/windres.exe
 LinkOptions            :=  
 IncludePath            :=  $(IncludeSwitch). $(IncludeSwitch). 
 IncludePCH             := 
@@ -49,20 +49,20 @@ LibPath                := $(LibraryPathSwitch).
 ## Common variables
 ## AR, CXX, CC, AS, CXXFLAGS and CFLAGS can be overriden using an environment variables
 ##
-AR       := C:/TDM-GCC-64/bin/ar.exe rcu
-CXX      := C:/TDM-GCC-64/bin/g++.exe
-CC       := C:/TDM-GCC-64/bin/gcc.exe
-CXXFLAGS :=  -g -O0 -Wall $(Preprocessors)
+AR       := C:/Users/mkac/Documents/gcc/bin/ar.exe rcu
+CXX      := C:/Users/mkac/Documents/gcc/bin/g++.exe
+CC       := C:/Users/mkac/Documents/gcc/bin/gcc.exe
+CXXFLAGS :=  -g -std=c++11 -O0 -Wall $(Preprocessors)
 CFLAGS   :=  -g -O0 -Wall $(Preprocessors)
 ASFLAGS  := 
-AS       := C:/TDM-GCC-64/bin/as.exe
+AS       := C:/Users/mkac/Documents/gcc/bin/as.exe
 
 
 ##
 ## User defined environment variables
 ##
-CodeLiteDir:=C:\Program Files\CodeLite
-Objects0=$(IntermediateDirectory)/SerialCom.cpp$(ObjectSuffix) $(IntermediateDirectory)/main.cpp$(ObjectSuffix) 
+CodeLiteDir:=C:\Users\mkac\Desktop\CodeL
+Objects0=$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IntermediateDirectory)/SerialCom.cpp$(ObjectSuffix) 
 
 
 
@@ -93,21 +93,21 @@ PreBuild:
 ##
 ## Objects
 ##
-$(IntermediateDirectory)/SerialCom.cpp$(ObjectSuffix): SerialCom.cpp $(IntermediateDirectory)/SerialCom.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/MK-AFK/Documents/CPP/cpp/SerialPortCPP/SerialPortCom/SerialCom.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/SerialCom.cpp$(ObjectSuffix) $(IncludePath)
-$(IntermediateDirectory)/SerialCom.cpp$(DependSuffix): SerialCom.cpp
-	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/SerialCom.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/SerialCom.cpp$(DependSuffix) -MM SerialCom.cpp
-
-$(IntermediateDirectory)/SerialCom.cpp$(PreprocessSuffix): SerialCom.cpp
-	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/SerialCom.cpp$(PreprocessSuffix) SerialCom.cpp
-
 $(IntermediateDirectory)/main.cpp$(ObjectSuffix): main.cpp $(IntermediateDirectory)/main.cpp$(DependSuffix)
-	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/MK-AFK/Documents/CPP/cpp/SerialPortCPP/SerialPortCom/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/mkac/Documents/cpp/SerialPortCPP/SerialPortCom/main.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/main.cpp$(ObjectSuffix) $(IncludePath)
 $(IntermediateDirectory)/main.cpp$(DependSuffix): main.cpp
 	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/main.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/main.cpp$(DependSuffix) -MM main.cpp
 
 $(IntermediateDirectory)/main.cpp$(PreprocessSuffix): main.cpp
 	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/main.cpp$(PreprocessSuffix) main.cpp
+
+$(IntermediateDirectory)/SerialCom.cpp$(ObjectSuffix): SerialCom.cpp $(IntermediateDirectory)/SerialCom.cpp$(DependSuffix)
+	$(CXX) $(IncludePCH) $(SourceSwitch) "C:/Users/mkac/Documents/cpp/SerialPortCPP/SerialPortCom/SerialCom.cpp" $(CXXFLAGS) $(ObjectSwitch)$(IntermediateDirectory)/SerialCom.cpp$(ObjectSuffix) $(IncludePath)
+$(IntermediateDirectory)/SerialCom.cpp$(DependSuffix): SerialCom.cpp
+	@$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) -MG -MP -MT$(IntermediateDirectory)/SerialCom.cpp$(ObjectSuffix) -MF$(IntermediateDirectory)/SerialCom.cpp$(DependSuffix) -MM SerialCom.cpp
+
+$(IntermediateDirectory)/SerialCom.cpp$(PreprocessSuffix): SerialCom.cpp
+	$(CXX) $(CXXFLAGS) $(IncludePCH) $(IncludePath) $(PreprocessOnlySwitch) $(OutputSwitch) $(IntermediateDirectory)/SerialCom.cpp$(PreprocessSuffix) SerialCom.cpp
 
 
 -include $(IntermediateDirectory)/*$(DependSuffix)
